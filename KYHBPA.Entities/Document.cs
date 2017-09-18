@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace KYHBPA.Entities
 {
-    public class Report : BaseDbObject
+    public class Document : BaseDbObject
     {
+        public int DocumentType { get; set; }
         public string Description { get; set; }
+        public byte[] FileByte { get; set; }
     }
 }

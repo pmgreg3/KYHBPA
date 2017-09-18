@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using KYHBPA.Entities; 
+
 
 namespace KYHBPA.Web.Models
 {
@@ -29,5 +31,7 @@ namespace KYHBPA.Web.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Report> Report { get; set; }
     }
 }

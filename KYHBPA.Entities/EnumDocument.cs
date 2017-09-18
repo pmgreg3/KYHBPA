@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace KYHBPA.Entities
 {
-    public class Report : BaseDbObject
+    public enum EnumDocument
     {
-        public string Description { get; set; }
+        Report = 1,
+        Photo,
     }
 }

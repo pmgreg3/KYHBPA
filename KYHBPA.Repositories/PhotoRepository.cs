@@ -2,38 +2,40 @@
 using KYHBPA.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace KYHBPA.Data
+namespace KYHBPA.Repositories
 {
-    public abstract class BaseGenericRepository<T> : IGenericRepository<T>
+    public class PhotoRepository : IGenericRepository<Photo>
     {
-        public virtual void AddAsync(T entity)
+        public void AddAsync(Photo entity)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void DeleteAsync(T entity)
+        public void DeleteAsync(Photo entity)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void EditAsync(T entity)
+        public void EditAsync(Photo entity)
         {
             throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> GetAllAsync()
+        public IEnumerable<Photo> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public virtual T GetByIdAsync(int id)
+        public Photo GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void SaveAsync(T entity)
+        public void SaveAsync(Photo entity)
         {
             throw new NotImplementedException();
         }
