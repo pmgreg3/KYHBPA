@@ -8,8 +8,8 @@ namespace KYHBPA.Entities
 {
     public class Document : BaseDbObject
     {
-        public int DocumentType { get; set; }
+        public int Type { get; set; }
         public string Description { get; set; }
-        public byte[] FileByte { get; set; }
+        public byte[] FileContent { get; set; }
     }
 }

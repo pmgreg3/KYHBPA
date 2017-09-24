@@ -43,7 +43,8 @@
     <Compile Include="BaseDbObject.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="EnumDocument.cs" />
-    <Compile Include="Photo.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs" />
   </ItemGroup>

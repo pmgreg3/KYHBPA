@@ -8,34 +8,34 @@ using System.Threading.Tasks;
 
 namespace KYHBPA.Repositories
 {
-    public class PhotoRepository : IGenericRepository<Photo>
+    public class PhotoRepository : IGenericRepository<Image>
     {
-        public void AddAsync(Photo entity)
+        public void AddAsync(Image entity)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteAsync(Photo entity)
+        public void DeleteAsync(Image entity)
         {
             throw new NotImplementedException();
         }
 
-        public void EditAsync(Photo entity)
+        public void EditAsync(Image entity)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Photo> GetAllAsync()
+        public IEnumerable<Image> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Photo GetByIdAsync(int id)
+        public Image GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void SaveAsync(Photo entity)
+        public void SaveAsync(Image entity)
         {
             throw new NotImplementedException();
         }

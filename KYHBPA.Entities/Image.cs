@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace KYHBPA.Entities
 {
-    public class Photo : BaseDbObject
+    public class Image : BaseDbObject
     {
-
+        string Type { get; set; }
     }
 }

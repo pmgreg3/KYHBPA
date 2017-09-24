@@ -9,7 +9,6 @@ namespace KYHBPA.Entities
     public abstract class BaseDbObject
     {
         public int Id { get; set; }
-        public string Name { get; set; }
         public bool IsActive { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedOn { get; set; }

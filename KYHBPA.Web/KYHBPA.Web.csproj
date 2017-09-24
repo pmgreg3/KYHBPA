@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -194,6 +195,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709241915530_InitialCreate.cs" />
+    <Compile Include="Migrations\201709241915530_InitialCreate.Designer.cs">
+      <DependentUpon>201709241915530_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709241924210_UpdateMemberTable.cs" />
+    <Compile Include="Migrations\201709241924210_UpdateMemberTable.Designer.cs">
+      <DependentUpon>201709241924210_UpdateMemberTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709241928393_DeleteNameFromDbBaseObject.cs" />
+    <Compile Include="Migrations\201709241928393_DeleteNameFromDbBaseObject.Designer.cs">
+      <DependentUpon>201709241928393_DeleteNameFromDbBaseObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -292,6 +306,17 @@
       <Project>{b39593a0-09aa-475d-8b31-bcfbf66abf1b}</Project>
       <Name>KYHBPA.Data.Repositories</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709241915530_InitialCreate.resx">
+      <DependentUpon>201709241915530_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709241924210_UpdateMemberTable.resx">
+      <DependentUpon>201709241924210_UpdateMemberTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709241928393_DeleteNameFromDbBaseObject.resx">
+      <DependentUpon>201709241928393_DeleteNameFromDbBaseObject.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

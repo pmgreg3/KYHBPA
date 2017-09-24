@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace KYHBPA.Web.Models
@@ -79,6 +80,24 @@ namespace KYHBPA.Web.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Street")]
+        public string StreetAddress { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
+
+        [Display(Name = "Date of Birth")]
+        [DataType(DataType.DateTime)]
+        public DateTime DateOfBirth { get; set; }  
+        
+        public string LicenseNumber { get; set; }
     }
 
     public class ResetPasswordViewModel

@@ -151,7 +151,22 @@ namespace KYHBPA.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };               
+                var user = new ApplicationUser {
+                    UserName = model.Email,
+                    Email = model.Email
+                };
+
+                user.Member = new Entities.Member()
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    StreetAddress = model.StreetAddress,
+                    City = model.City,
+                    State = model.ZipCode,
+                    DateOfBirth = model.DateOfBirth,
+                    LicenseNumber = model.LicenseNumber
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
