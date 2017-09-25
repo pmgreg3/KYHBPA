@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KYHBPA.Repositories
+namespace KYHBPA.Data.Repositories
 {
-    public class PhotoRepository : IGenericRepository<Image>
+    public class ImageRepository : IGenericRepository<Image>
     {
         public void AddAsync(Image entity)
         {

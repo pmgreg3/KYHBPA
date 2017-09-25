@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KYHBPA.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace KYHBPA.Data.Interfaces
 {
-    public interface IGenericRepository<T>
+    public interface IGenericRepository<TEntity> where TEntity : BaseDbObject
     {
-        IEnumerable<T> GetAllAsync();
-        T GetByIdAsync(int id);
-        void AddAsync(T entity);
-        void DeleteAsync(T entity);
-        void EditAsync(T entity);
-        void SaveAsync(T entity);
+        IEnumerable<TEntity> GetAllAsync();
+        TEntity GetByIdAsync(int id);
+        void AddAsync(TEntity entity);
+        void DeleteAsync(TEntity entity);
+        void EditAsync(TEntity entity);
+        void SaveAsync(TEntity entity);
     }
 }
