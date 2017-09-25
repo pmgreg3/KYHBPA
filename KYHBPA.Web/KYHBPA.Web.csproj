@@ -227,6 +227,10 @@
     <Compile Include="Migrations\201709241928393_DeleteNameFromDbBaseObject.Designer.cs">
       <DependentUpon>201709241928393_DeleteNameFromDbBaseObject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709251253234_AddingImageTable.cs" />
+    <Compile Include="Migrations\201709251253234_AddingImageTable.Designer.cs">
+      <DependentUpon>201709251253234_AddingImageTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -336,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709241928393_DeleteNameFromDbBaseObject.resx">
       <DependentUpon>201709241928393_DeleteNameFromDbBaseObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709251253234_AddingImageTable.resx">
+      <DependentUpon>201709251253234_AddingImageTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

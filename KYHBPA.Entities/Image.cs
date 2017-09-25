@@ -8,6 +8,7 @@ namespace KYHBPA.Entities
 {
     public class Image : BaseDbObject
     {
+        public byte[] Content { get; set; }
         string Type { get; set; }
     }
 }

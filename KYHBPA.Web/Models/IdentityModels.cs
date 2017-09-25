@@ -36,5 +36,6 @@ namespace KYHBPA.Web.Models
 
         public DbSet<Report> Report { get; set; }
         public DbSet<Member> Member { get; set; }
+        public DbSet<Image> Image { get; set; }
     }
 }
