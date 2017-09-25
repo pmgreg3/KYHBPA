@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201709251253234_AddingImageTable.Designer.cs">
       <DependentUpon>201709251253234_AddingImageTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709251303209_AddingTitleAndDescriptionToImageTable.cs" />
+    <Compile Include="Migrations\201709251303209_AddingTitleAndDescriptionToImageTable.Designer.cs">
+      <DependentUpon>201709251303209_AddingTitleAndDescriptionToImageTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -238,6 +242,7 @@
     <Compile Include="Models\PhotoGalleryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Image\AddImageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -343,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709251253234_AddingImageTable.resx">
       <DependentUpon>201709251253234_AddingImageTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709251303209_AddingTitleAndDescriptionToImageTable.resx">
+      <DependentUpon>201709251303209_AddingTitleAndDescriptionToImageTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

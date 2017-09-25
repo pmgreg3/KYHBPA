@@ -19,6 +19,14 @@ namespace KYHBPA.Data.Repositories
 
         public void AddAsync(Image entity)
         {
+            var shit = new Image()
+            {
+                Title = "Did it work",
+                Description = "Hopefully"
+            };
+
+            _dbcontext.Image.Add(shit);
+
             throw new NotImplementedException();
         }
 
