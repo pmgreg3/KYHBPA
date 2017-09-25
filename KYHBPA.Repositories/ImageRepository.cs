@@ -10,6 +10,13 @@ namespace KYHBPA.Data.Repositories
 {
     public class ImageRepository : IGenericRepository<Image>
     {
+        private IKYHBPADbContext _dbcontext;       
+
+        public ImageRepository(IKYHBPADbContext dbContext)
+        {
+            _dbcontext = dbContext;
+        }
+
         public void AddAsync(Image entity)
         {
             throw new NotImplementedException();

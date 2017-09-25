@@ -42,6 +42,7 @@ namespace KYHBPA.Web.App_Start
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IGenericRepository<Report>, ReportRepository>();
             container.RegisterType<IGenericRepository<Image>, ImageRepository>();
+            container.RegisterType<IKYHBPADbContext, KYHBPADbContext>();
         }
     }
 }

@@ -10,6 +10,13 @@ namespace KYHBPA.Data.Repositories
 {
     public class ReportRepository : IGenericRepository<Report>
     {
+        private IKYHBPADbContext _dbContext;
+
+        public ReportRepository(IKYHBPADbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public void AddAsync(Report entity)
         {
             throw new NotImplementedException();
