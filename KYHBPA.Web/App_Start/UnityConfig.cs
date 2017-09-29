@@ -4,6 +4,11 @@ using Microsoft.Practices.Unity.Configuration;
 using KYHBPA.Data.Interfaces;
 using KYHBPA.Entities;
 using KYHBPA.Data.Repositories;
+using Microsoft.AspNet.Identity;
+using KYHBPA.Web.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+using KYHBPA.Web.Controllers;
+using System.Data.Entity;
 
 namespace KYHBPA.Web.App_Start
 {
@@ -43,6 +48,12 @@ namespace KYHBPA.Web.App_Start
             container.RegisterType<IGenericRepository<Report>, ReportRepository>();
             container.RegisterType<IGenericRepository<Image>, ImageRepository>();
             container.RegisterType<IKYHBPADbContext, KYHBPADbContext>();
+
+            //Register for Microsoft Identity
+            container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager());
+            container.RegisterType<UserManager<ApplicationUser>>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new HierarchicalLifetimeManager());
+            container.RegisterType<AccountController>(new InjectionConstructor());
         }
     }
 }
