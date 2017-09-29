@@ -1,4 +1,6 @@
-﻿using KYHBPA.Data.Repositories;
+﻿using KYHBPA.Data.Interfaces;
+using KYHBPA.Data.Repositories;
+using KYHBPA.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,13 @@ namespace KYHBPA.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IGenericRepository<Image> _ImageRepo;
+
+        public HomeController(IGenericRepository<Image> imageRepo)
+        {
+            _ImageRepo = imageRepo;
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -17,6 +26,12 @@ namespace KYHBPA.Web.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+            var imgToAdd = new Image()
+            {
+                Title = "Hello",
+            };
+            
+            _ImageRepo.AddAsync(imgToAdd);
 
             return View();
         }
