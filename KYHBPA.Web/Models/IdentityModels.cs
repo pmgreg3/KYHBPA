@@ -3,8 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using KYHBPA.Entities; 
-
+using KYHBPA.Entities;
+using KYHBPA.Data.Interfaces;
 
 namespace KYHBPA.Web.Models
 {
@@ -22,7 +22,7 @@ namespace KYHBPA.Web.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser> , IKYHBPADbContext
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -32,6 +32,16 @@ namespace KYHBPA.Web.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        public void SetModified(object entity)
+        {
+            Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Commit()
+        {
+            SaveChanges();
         }
 
         public DbSet<Report> Report { get; set; }

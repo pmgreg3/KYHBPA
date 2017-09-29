@@ -12,5 +12,6 @@ namespace KYHBPA.Entities
         public string Description { get; set; }
         public byte[] Content { get; set; }
         string Type { get; set; }
+        public bool InImageGallery { get; set; }
     }
 }

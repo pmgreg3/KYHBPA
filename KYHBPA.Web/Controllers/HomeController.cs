@@ -25,14 +25,6 @@ namespace KYHBPA.Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-            var imgToAdd = new Image()
-            {
-                Title = "Hello",
-            };
-            
-            _ImageRepo.AddAsync(imgToAdd);
-
             return View();
         }
 

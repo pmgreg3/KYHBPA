@@ -42,9 +42,9 @@ namespace KYHBPA.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public void SaveAsync(Report entity)
+        public void Save()
         {
-            throw new NotImplementedException();
+            _dbContext.Commit();
         }
     }
 }

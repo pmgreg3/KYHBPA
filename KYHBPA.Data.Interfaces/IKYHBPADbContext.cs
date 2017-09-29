@@ -13,5 +13,7 @@ namespace KYHBPA.Data.Interfaces
         DbSet<Image> Image { get; set; }
         DbSet<Report> Report { get; set; }
         DbSet<Member> Member { get; set; }
+        void SetModified(object entity);
+        void Commit();
     }
 }

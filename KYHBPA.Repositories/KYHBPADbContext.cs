@@ -15,5 +15,14 @@ namespace KYHBPA.Data.Repositories
         public DbSet<Report> Report { get; set; }
         public DbSet<Member> Member { get; set; }
 
+        public void SetModified(object entity)
+        {
+            Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Commit()
+        {
+            SaveChanges();
+        }
     }
 }

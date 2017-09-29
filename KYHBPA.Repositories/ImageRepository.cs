@@ -2,6 +2,7 @@
 using KYHBPA.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,40 +20,33 @@ namespace KYHBPA.Data.Repositories
 
         public void AddAsync(Image entity)
         {
-            var shit = new Image()
-            {
-                Title = "Did it work",
-                Description = "Hopefully"
-            };
-
-            _dbcontext.Image.Add(shit);
-
-            throw new NotImplementedException();
+            _dbcontext.Image.Add(entity);
         }
 
         public void DeleteAsync(Image entity)
         {
-            throw new NotImplementedException();
+            _dbcontext.Image.Remove(entity);
         }
 
         public void EditAsync(Image entity)
         {
-            throw new NotImplementedException();
+            _dbcontext.Image.Attach(entity);
+            _dbcontext.SetModified(entity);
         }
 
         public IEnumerable<Image> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return _dbcontext.Image.ToList();
         }
 
         public Image GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _dbcontext.Image.Find(id);
         }
 
-        public void SaveAsync(Image entity)
+        public void Save()
         {
-            throw new NotImplementedException();
+            _dbcontext.Commit();
         }
     }
 }

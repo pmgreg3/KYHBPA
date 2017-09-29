@@ -14,6 +14,6 @@ namespace KYHBPA.Data.Interfaces
         void AddAsync(TEntity entity);
         void DeleteAsync(TEntity entity);
         void EditAsync(TEntity entity);
-        void SaveAsync(TEntity entity);
+        void Save();
     }
 }
