@@ -19,27 +19,28 @@ namespace KYHBPA.Data.Repositories
 
         public void AddAsync(Report entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Report.Add(entity);
         }
 
         public void DeleteAsync(Report entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Report.Remove(entity);
         }
 
         public void EditAsync(Report entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Report.Attach(entity);
+            _dbContext.SetModified(entity);
         }
 
         public IEnumerable<Report> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return _dbContext.Report.ToList();
         }
 
         public Report GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _dbContext.Report.Find(id);
         }
 
         public void Save()

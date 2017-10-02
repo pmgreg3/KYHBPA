@@ -11,42 +11,42 @@ namespace KYHBPA.Data.Repositories
 {
     public class ImageRepository : IGenericRepository<Image>
     {
-        private IKYHBPADbContext _dbcontext;       
+        private IKYHBPADbContext _dbContext;       
 
         public ImageRepository(IKYHBPADbContext dbContext)
         {
-            _dbcontext = dbContext;
+            _dbContext = dbContext;
         }
 
         public void AddAsync(Image entity)
         {
-            _dbcontext.Image.Add(entity);
+            _dbContext.Image.Add(entity);
         }
 
         public void DeleteAsync(Image entity)
         {
-            _dbcontext.Image.Remove(entity);
+            _dbContext.Image.Remove(entity);
         }
 
         public void EditAsync(Image entity)
         {
-            _dbcontext.Image.Attach(entity);
-            _dbcontext.SetModified(entity);
+            _dbContext.Image.Attach(entity);
+            _dbContext.SetModified(entity);
         }
 
         public IEnumerable<Image> GetAllAsync()
         {
-            return _dbcontext.Image.ToList();
+            return _dbContext.Image.ToList();
         }
 
         public Image GetByIdAsync(int id)
         {
-            return _dbcontext.Image.Find(id);
+            return _dbContext.Image.Find(id);
         }
 
         public void Save()
         {
-            _dbcontext.Commit();
+            _dbContext.Commit();
         }
     }
 }
