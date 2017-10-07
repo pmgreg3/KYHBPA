@@ -211,6 +211,7 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -239,6 +240,10 @@
     <Compile Include="Migrations\201709291844354_AddedPropertyToImageTable.Designer.cs">
       <DependentUpon>201709291844354_AddedPropertyToImageTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710071828072_MakingImageTypePublic.cs" />
+    <Compile Include="Migrations\201710071828072_MakingImageTypePublic.Designer.cs">
+      <DependentUpon>201710071828072_MakingImageTypePublic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -246,7 +251,8 @@
     <Compile Include="Models\PhotoGalleryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\Image\AddImageViewModel.cs" />
+    <Compile Include="Views\Image\CreateImageViewModel.cs" />
+    <Compile Include="Views\Image\IndexImageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\KYHBPALocalDb.mdf" />
@@ -311,6 +317,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Image\Index.cshtml" />
+    <Content Include="Views\Image\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -360,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709291844354_AddedPropertyToImageTable.resx">
       <DependentUpon>201709291844354_AddedPropertyToImageTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071828072_MakingImageTypePublic.resx">
+      <DependentUpon>201710071828072_MakingImageTypePublic.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,6 +1,7 @@
 ﻿using KYHBPA.Data.Interfaces;
 using KYHBPA.Data.Repositories;
 using KYHBPA.Entities;
+using KYHBPA.Web.Views.Image;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,6 @@ namespace KYHBPA.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IGenericRepository<Image> _ImageRepo;
-
-        public HomeController(IGenericRepository<Image> imageRepo)
-        {
-            _ImageRepo = imageRepo;
-        }
-
         public ActionResult Index()
         {
             return View();

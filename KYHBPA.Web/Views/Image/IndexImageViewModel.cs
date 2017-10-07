@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace KYHBPA.Entities
+namespace KYHBPA.Web.Views.Image
 {
-    public class Image : BaseDbObject
+    public class IndexImageViewModel
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public byte[] Content { get; set; }
         public string Type { get; set; }
         public bool InImageGallery { get; set; }
     }

@@ -21,6 +21,7 @@ namespace KYHBPA.Data.Repositories
         public void AddAsync(Image entity)
         {
             _dbContext.Image.Add(entity);
+            Save();
         }
 
         public void DeleteAsync(Image entity)
