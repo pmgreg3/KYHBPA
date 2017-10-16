@@ -14,5 +14,15 @@ namespace KYHBPA.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult EditImages()
+        {
+            return View();
+        }
+
+        public ActionResult EditUsers()
+        {
+            return View();
+        }
     }
 }
